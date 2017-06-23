@@ -1,59 +1,60 @@
-#-----------------COMENTARIOS-------------
-    # comentario de uma linha
+#======================INTRODUÇÃO=====================
+    #-------COMENTARIOS-------------
+        # comentario de uma linha
 
 =begin
-    comentario de varias linhas
+        comentario de varias linhas
 =end
 
 
-#------CONVERSOES DE NOMECLATURA
-=begin   
-    variavel local:     variavel_local
+    #------CONVERSOES DE NOMECLATURA
+       
+       #variavel local:     variavel_local
 
-=end
+    
 
-#----------- Tipo de dados
-"string"    #String
-21          #Numero
-true        #Boleano
-=           #Atribuição
+    #----------- Tipo de dados
+    "string"    #String
+    21          #Numero
+    true        #Boleano
+    =           #Atribuição
 
-#-----------OPERADORES MATEMATICOS
-2 + 2   #Adição
-2 - 2   #Subtração
-2 * 3   #Multiplicação
-2 / 3   #Divisão
-2**3    #Exponenciação
-2 % 3   #Resto
-
-
-#--------SAIDA DE TELA----------------------
-print "texto" 
-puts "texto"    #adiciona uma quebra de linha antes de texto
-
-#-------------OPERAÇÃO EM STRING------------
-string.length   #retorna tamanho da string
-string.reverse  #inverte string
-string.upcase   #torna toda string MAISCULA
-string.downcase #torna toda string MINUSCULA
-
-string.upcase   #torna a string toda maiscula
-string.upcase!  #altera a string contida dentro da variavel
-
-string.captalize   #torna a primeira letra da string maiscula
-string.captalize!  #altera a string contida dentro da variavel
+    #-----------OPERADORES MATEMATICOS
+    2 + 2   #Adição
+    2 - 2   #Subtração
+    2 * 3   #Multiplicação
+    2 / 3   #Divisão
+    2**3    #Exponenciação
+    2 % 3   #Resto
 
 
-#------LEITURA DE DADOS---------------
-variavel = gets.chomp #remove linha branca adicionada pelo ruby
+    #--------SAIDA DE TELA----------------------
+    print "texto" 
+    puts "texto"    #adiciona uma quebra de linha antes de texto
+
+    #-------------OPERAÇÃO EM STRING------------
+    string.length   #retorna tamanho da string
+    string.reverse  #inverte string
+    string.upcase   #torna toda string MAISCULA
+    string.downcase #torna toda string MINUSCULA
+
+    string.upcase   #torna a string toda maiscula
+    string.upcase!  #altera a string contida dentro da variavel
+
+    string.captalize   #torna a primeira letra da string maiscula
+    string.captalize!  #altera a string contida dentro da variavel
 
 
-#---CONCATENAR DADOS EM SAIDA---------
-puts "texto bla bla bla #{dados_a_ser_concatenado}"
+    #------LEITURA DE DADOS---------------
+    variavel = gets.chomp #remove linha branca adicionada pelo ruby
 
 
+    #---CONCATENAR DADOS EM SAIDA---------
+    puts "texto bla bla bla #{dados_a_ser_concatenado}"
 
-#-------------FLUXO DE CONTROLE-----------
+#=========================================
+
+#==========================FLUXO DE CONTROLE===================
   #--IF-ELSIF-ELSE-  
     if cond1
         #faz_algo1
@@ -82,55 +83,138 @@ puts "texto bla bla bla #{dados_a_ser_concatenado}"
     &&  # e
     ||  # ou
     !   # não
-#
 
+#=========================================
 
+#========================INTERAÇÕES EM RUBY===================
+    #---------- LAÇOS -------------
+        #--WHILE---------------
+            while expressao do   #roda ate expressão ser falsa
+                #faz algo
+            end
+        #
 
-#------------------------------------------
-++  #NÃO EXISTE em RUBY !!!
-+=  #soma + 1 depois incrementa
+        #--UNTIL----------------
+            until expressao do
+                #faz_algo
+            end
+        #
 
-#------------------------------
-#ruby aceita do end, como {}
-do end  || {}
+        #--FOR-------------
+            for n in i..j #roda n de i a j 
+                #faz algo
+            end
+            
+            #--INTERVALOS-------------------
+            1...10   #Va até 10, 10 EXCLUIDO
+            1..10    #Va até 10, 10 INCLUIDO
+        #
 
+        #--LOOP-------------
+            loop do
+                #faz algo
+                break if expressao #sai_laço
+            end
 
-#===================== LAÇOS ====================
-    #--FOR--
-    for n in i..j #roda n de i a j 
-    #faz algo
-    end
+            #----NEXT--BREAK--------------
+            break #quebra laço
+            next  #proxima interação do laço
+        #
 
-    #--LOOP--
-    loop do
-        #faz algo
-        break if expressao #sai_laço
-    end
+        #--EACH-------------
+        dados.each do |variavel|
+            #faz_algo
+        end
 
-    #--WHILE--
-    while expressao do   #roda ate expressão ser falsa
-        #faz algo
-    end
+        #--TIMES------------
+        qnt_vezes.times { faça_algo }
+    #
 
-    #--UNTIL--
-    until expressao do
-        #faz_algo
-    end
+    #-----------OPERADORES DE ATRIBUIÇÃO--------------------
+        a += a  #soma 1 depois atribui
+        a -= a  #subtrai 1 depois atribui
+        a *= a #multiplica depois atribui
+        a /= a   #divide depois atribui
 
-    #--EACH--
-    dados.each do |variavel|
-        #faz_algo
-    end
+        ++ -- #NÃO EXISTE em RUBY !!!
+    #
 
-        #--TIMES--
-    qnt_vezes.times { faça_algo }
+    #!!!OBS!!! ruby aceita do end, como {}
+            expresao do faz_algo end    
+    
+            expressao{ faz_algo }
+    #
+    
+#=========================================
 
-#------------------------
-1...10   #Va até 10, mas náo o inclua
-1..10    #Va até 10, 10 incluido
+#======================ESTRUTURAS DE DADOS================
+    #--ARRAY
+        my_array = [35,23,14,67]    #atribui array
+        my_array[2]    #acessa array, return 14           
+    #
 
-#------------------------
-break #quebra laço
-next  #proxima interação do laço
+    #--Array Multidimencionais
+        multi_d_array = [[0,0],[0,0]]   #cubo 2x2 de 0s
+    #
 
+    #--HASH-----
+        my_hash = {             #cria hash manual
+            cahve1 => valor1,
+            chave2 => valor2
+        }
 
+        my_hash[chave1]    #Acessa hash, returno valor1
+
+        my_home = Hash.new      #cria hash vazio automatico
+        my_home["chave_arthur"] = "casa_arthur" 
+        my_home["chave_ana"]    = "casa_ana"
+
+        my_home["chave_arthur"] #acessa chave_arthur, retorna casa_arthur
+
+    #
+
+    #---Iterando Arrays
+        languages = ["HTML", "CSS", "JavaScript"]
+        languages.each {|x| puts x} #imprime cada elemento do array
+        languages.each do |x| puts x    
+    
+        #Intrando Array Multidimencional
+            s = [["ham", "swiss"], ["turkey", "cheddar"], ["roast beef", "gruyere"]]
+
+            s.each do |x|
+                x.each do |y| 
+                    puts y
+                end
+            end  
+        #
+
+        #Iterando Hashes (chave e valor)
+            secret_identities = {
+                "O Batman" => "Bruce Wayne",
+                "Superman" => "Clark Kent",
+            }
+            
+            #imprime chave e valor
+            secret_identities.each do |name_super, name_personal|
+                puts "#{name_super}: #{name_personal}"
+            end
+        #
+
+        #Iterando Hash Parcial (valor)
+            lunch_order = {
+                "Ryan" => "sopa",
+                "Eric" => "hamburger",
+                "Jimmy" => "sanduíche",
+                "Sasha" => "salada",
+                "Cole" => "taco"
+            }
+
+            #imprime somente valor
+            lunch_order.each do |human,food|
+                puts food
+            end
+        #
+
+    #
+
+#=========================================
