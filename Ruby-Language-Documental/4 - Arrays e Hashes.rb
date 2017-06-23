@@ -14,7 +14,9 @@
             chave2 => valor2
         }
 
-        my_hash[chave1]    #Acessa hash, returno valor1
+        my_hash[chave1]         #acessa hash, returno valor1
+        my_hash = Hash.new      #cria Hash vazio
+        my_hash = Hash.new(0)   #cira Hash com valor padrão 0
 
         my_home = Hash.new      #cria hash vazio automatico
         my_home["chave_arthur"] = "casa_arthur" 
@@ -67,5 +69,4 @@
         #
 
     #
-
 #=========================================

@@ -52,4 +52,7 @@
     #---CONCATENAR DADOS EM SAIDA---------
     puts "texto bla bla bla #{dados_a_ser_concatenado}"
 
+    #--CONVERSÃO DE DADOS-----
+    my_int.to_s
+
 #=========================================
