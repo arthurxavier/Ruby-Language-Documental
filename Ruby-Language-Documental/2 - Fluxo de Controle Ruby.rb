@@ -15,6 +15,9 @@
         puts "estou com fome"
     end
 
+  # IF ou Unles em uma linha
+  return x if 1 == 1
+
   #--Comparativos ARITMETICOS
     !=  #diferente
     ==  #iguais
